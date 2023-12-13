@@ -2,12 +2,13 @@ import AcmeLogo from "@/app/ui/acme-logo";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { lusitana } from "./ui/fonts";
+import Image from "next/image";
 
 export default function Page() {
   return (
     <main className="flex flex-col p-6 min-h-screen">
       <div className="flex items-end p-4 h-20 bg-blue-500 rounded-lg md:h-52 shrink-0">
-        {/* <AcmeLogo /> */}
+        {<AcmeLogo />}
       </div>
       <div className="flex flex-col gap-4 mt-4 md:flex-row grow">
         <div className="flex flex-col gap-6 justify-center py-10 px-6 bg-gray-50 rounded-lg md:px-20 md:w-2/5">
@@ -30,6 +31,20 @@ export default function Page() {
         </div>
         <div className="flex justify-center items-center p-6 md:py-12 md:px-28 md:w-3/5">
           {/* Add Hero Images Here */}
+          <Image
+            src="/hero-desktop.png"
+            width={1000}
+            height={760}
+            className="hidden md:block"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
+            src="/hero-mobile.png"
+            width={560}
+            height={620}
+            className="block md:hidden"
+            alt="Screenshots of the dashboard project showing mobile version"
+          />
         </div>
       </div>
     </main>
